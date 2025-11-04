@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -10,12 +9,12 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 def run_page1():
     st.header("2. Environment Setup (Overview)")
-    st.markdown("""
+    st.markdown(r"""
     Before diving into the specifics of AI assurance artifacts, we need to ensure our environment is set up. This application utilizes several Python libraries for data generation, manipulation, visualization, and interactive elements.
     """)
 
     st.header("3. Data/Inputs Overview")
-    st.markdown("""
+    st.markdown(r"""
     In this application, we will leverage **synthetic data** to simulate a realistic AI development and deployment scenario. This approach allows us to demonstrate the creation of AI assurance artifacts without relying on sensitive or proprietary real-world datasets.
 
     Our synthetic data will feature:
@@ -28,7 +27,7 @@ def run_page1():
     """)
 
     st.header("4. Methodology Overview")
-    st.markdown("""
+    st.markdown(r"""
     Our approach to generating AI assurance artifacts follows a structured, step-by-step process:
     1.  **Define Model & Data Characteristics**: Interactively specify parameters for a synthetic AI model and its dataset.
     2.  **Generate Synthetic Data**: Create a dataset based on defined characteristics, including features, a target variable, and a timestamp.
@@ -87,7 +86,7 @@ def define_model_parameters_streamlit():
     Streamlit-compatible function to capture synthetic AI model parameters.
     """
     with st.expander("Define Synthetic AI Model Parameters", expanded=True):
-        st.markdown("A Model Card provides a structured overview of an AI model's purpose, characteristics, performance, and ethical considerations. It serves as a crucial document for transparency, accountability, and responsible deployment. Use the widgets below to specify parameters for our synthetic AI model.")
+        st.markdown(r"""A Model Card provides a structured overview of an AI model's purpose, characteristics, performance, and ethical considerations. It serves as a crucial document for transparency, accountability, and responsible deployment. Use the widgets below to specify parameters for our synthetic AI model.""")
 
         col1, col2 = st.columns(2)
         with col1:
@@ -147,7 +146,7 @@ def define_data_characteristics_streamlit():
     Streamlit-compatible function to capture synthetic dataset characteristics.
     """
     with st.expander("Define Synthetic Data Characteristics", expanded=True):
-        st.markdown("A Data Card documents the dataset's characteristics, provenance, collection methods, and any identified biases or privacy considerations. This is vital for data governance and ensuring fair and responsible AI development. Use the widgets below to specify parameters for our synthetic dataset.")
+        st.markdown(r"""A Data Card documents the dataset's characteristics, provenance, collection methods, and any identified biases or privacy considerations. This is vital for data governance and ensuring fair and responsible AI development. Use the widgets below to specify parameters for our synthetic dataset.""")
 
         col1, col2 = st.columns(2)
         with col1:
